@@ -1,0 +1,13 @@
+.originalTextWrapper {
+    background-color: white;
+    width: 45%;
+    min-height: 200px;
+
+    font-size: 1.25em;
+    color:gray;
+    padding: 1.5%;
+
+    outline: none;
+    border:0px;
+    border-radius: 10px;
+}
