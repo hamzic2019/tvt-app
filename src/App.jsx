@@ -13,6 +13,10 @@ function App() {
   // I am going to pass state trough props but normally I would use createContext
   const [originalInput, setOriginalInput] = useState('');
   const [otherInput, setOtherInput] = useState('');
+
+  const handelReRun = () => {
+    runCompare(originalInput, otherInput)
+  }
   
   if(data != null) {
     console.log('Data: ', data);
@@ -25,7 +29,7 @@ function App() {
         <OriginalText originalInput={originalInput} setOriginalInput={setOriginalInput} />
         <OtherText otherInput={otherInput} setOtherInput={setOtherInput}  />
       </div>
-      <button onClick={() => runCompare(originalInput, otherInput)}>
+      <button onClick={() => handelReRun()}>
         {isFetching === false ? 'COMPARE TEXT': 'analyzing...'}
       
       </button>
